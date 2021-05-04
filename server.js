@@ -1,11 +1,13 @@
 // modules =================================================
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors')
 const app = express();
 
 
 // set our port
 const port = 3000;
+app.use(cors());
 app.get('/', (req, res) => res.send('Welcome to Dashboard'));
 
 const postRoutes = require('./routes/api_route');
